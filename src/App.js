@@ -5,7 +5,6 @@ import Dropdown from "./components/DropDown";
 import Translate from "./components/Translate";
 import Route from "./components/Route";
 import Header from './components/Header';
-import Link from './components/Link';
 
 const items = [
   {
@@ -48,10 +47,10 @@ const App = () => {
         {/* one jsx inside of another = child, therefore we receive children in the route component */}
         <Accordion items={items} />
       </Route>
-      <Route path="list">
+      <Route path="/list">
         <Search />
       </Route>
-      <Route path="dropdown">
+      <Route path="/dropdown">
         <Dropdown
           selected={selected}
           onSelectedChange={setSelected}
@@ -59,7 +58,7 @@ const App = () => {
           label="Select a color"
         />
       </Route>
-      <Route path="translate">
+      <Route path="/translate">
         <Translate />
       </Route>
     </div>
